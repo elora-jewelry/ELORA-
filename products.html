@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>محصولات | ELORA</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #0b0b0c;
+      color: #f5f5f5;
+      min-height: 100vh;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(11, 11, 12, 0.95);
+      border-bottom: 1px solid #28282b;
+      padding: 18px 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      color: #d4b06a;
+      font-size: 25px;
+      font-weight: bold;
+      letter-spacing: 4px;
+    }
+
+    .back {
+      color: #c9c9cc;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .back:hover {
+      color: #d4b06a;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 70px 20px 40px;
+    }
+
+    .hero span {
+      color: #d4b06a;
+      font-size: 12px;
+      letter-spacing: 3px;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      margin: 15px 0;
+    }
+
+    .hero p {
+      color: #96969b;
+      font-size: 15px;
+    }
+
+    .categories {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin: 10px 20px 40px;
+      flex-wrap: wrap;
+    }
+
+    .category {
+      background: #121214;
+      border: 1px solid #28282b;
+      color: #c9c9cc;
+      padding: 10px 22px;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+
+    .category:hover {
+      border-color: #d4b06a;
+      color: #d4b06a;
+    }
+
+    .products {
+      width: 88%;
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+      padding-bottom: 70px;
+    }
+
+    .product {
+      background: #121214;
+      border: 1px solid #28282b;
+      border-radius: 16px;
+      overflow: hidden;
+      transition: 0.3s;
+    }
+
+    .product:hover {
+      transform: translateY(-5px);
+      border-color: #d4b06a;
+    }
+
+    .product-image {
+      height: 250px;
+      background: linear-gradient(135deg, #171719, #0f0f10);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #77777c;
+      font-size: 14px;
+    }
+
+    .product-info {
+      padding: 18px;
+    }
+
+    .product-info h3 {
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+
+    .product-info p {
+      color: #96969b;
+      font-size: 13px;
+      margin-bottom: 15px;
+    }
+
+    .price {
+      color: #d4b06a;
+      font-weight: bold;
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+
+    .view {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      border: 1px solid #d4b06a;
+      color: #d4b06a;
+      padding: 10px;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    .view:hover {
+      background: #d4b06a;
+      color: #0b0b0c;
+    }
+
+    footer {
+      border-top: 1px solid #28282b;
+      text-align: center;
+      padding: 25px;
+      color: #77777c;
+      font-size: 12px;
+    }
+
+    @media (max-width: 900px) {
+      .products {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 550px) {
+      .products {
+        grid-template-columns: 1fr;
+        width: 92%;
+      }
+
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .product-image {
+        height: 280px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">ELORA</div>
+    <a href="index.html" class="back">← بازگشت به خانه</a>
+  </header>
+
+  <section class="hero">
+    <span>ELORA COLLECTION</span>
+    <h1>محصولات</h1>
+    <p>زیورآلاتی برای استایل خاص تو</p>
+  </section>
+
+  <div class="categories">
+    <button class="category">همه</button>
+    <button class="category">پیرسینگ</button>
+    <button class="category">گوشواره</button>
+  </div>
+
+  <section class="products">
+
+    <div class="product">
+      <div class="product-image">
+        تصویر محصول
+      </div>
+
+      <div class="product-info">
+        <h3>Silver Hoop</h3>
+        <p>گوشواره حلقه‌ای نقره‌ای</p>
+        <div class="price">۴۵۰,۰۰۰ تومان</div>
+        <a href="#" class="view">مشاهده محصول</a>
+      </div>
+    </div>
+
+
+    <div class="product">
+      <div class="product-image">
+        تصویر محصول
+      </div>
+
+      <div class="product-info">
+        <h3>Gold Piercing</h3>
+        <p>پیرسینگ ظریف طلایی</p>
+        <div class="price">۳۹۰,۰۰۰ تومان</div>
+        <a href="#" class="view">مشاهده محصول</a>
+      </div>
+    </div>
+
+
+    <div class="product">
+      <div class="product-image">
+        تصویر محصول
+      </div>
+
+      <div class="product-info">
+        <h3>Minimal Earrings</h3>
+        <p>گوشواره مینیمال</p>
+        <div class="price">۵۲۰,۰۰۰ تومان</div>
+        <a href="#" class="view">مشاهده محصول</a>
+      </div>
+    </div>
+
+
+    <div class="product">
+      <div class="product-image">
+        تصویر محصول
+      </div>
+
+      <div class="product-info">
+        <h3>Gold Hoop</h3>
+        <p>گوشواره حلقه‌ای طلایی</p>
+        <div class="price">۶۹۰,۰۰۰ تومان</div>
+        <a href="#" class="view">مشاهده محصول</a>
+      </div>
+    </div>
+
+  </section>
+
+  <footer>
+    © 2026 ELORA — Jewelry & Piercing
+  </footer>
+
+</body>
+                                  </html>
