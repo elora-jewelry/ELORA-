@@ -42,6 +42,36 @@
       margin-bottom: 35px;
     }
 
+    .order-box {
+      background: #151515;
+      border: 1px solid #333;
+      border-radius: 10px;
+      padding: 18px;
+      margin-bottom: 25px;
+    }
+
+    .order-box h2 {
+      color: #d4af37;
+      font-size: 18px;
+      margin-top: 0;
+    }
+
+    .order-item {
+      padding: 12px 0;
+      border-bottom: 1px solid #333;
+    }
+
+    .order-item:last-child {
+      border-bottom: none;
+    }
+
+    .total {
+      margin-top: 15px;
+      color: #d4af37;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
     label {
       display: block;
       margin: 18px 0 8px;
@@ -89,81 +119,132 @@
 
 <body>
 
-  <header>
-    <div class="logo">ELORA</div>
-  </header>
+<header>
+  <div class="logo">ELORA</div>
+</header>
 
-  <div class="container">
+<div class="container">
 
-    <h1>ثبت سفارش</h1>
+  <h1>ثبت سفارش</h1>
 
-    <form action="https://formspree.io/f/xppzleyo" method="POST">
-
-      <label>نام و نام خانوادگی</label>
-      <input
-        type="text"
-        name="نام و نام خانوادگی"
-        placeholder="نام و نام خانوادگی"
-        required
-      >
-
-      <label>شماره موبایل</label>
-      <input
-        type="tel"
-        name="شماره موبایل"
-        placeholder="09xxxxxxxxx"
-        required
-      >
-
-      <label>استان</label>
-      <input
-        type="text"
-        name="استان"
-        placeholder="استان"
-        required
-      >
-
-      <label>شهر</label>
-      <input
-        type="text"
-        name="شهر"
-        placeholder="شهر"
-        required
-      >
-
-      <label>آدرس کامل</label>
-      <textarea
-        name="آدرس کامل"
-        placeholder="آدرس کامل خود را وارد کنید"
-        required
-      ></textarea>
-
-      <label>کد پستی</label>
-      <input
-        type="text"
-        name="کد پستی"
-        placeholder="۱۰ رقمی"
-        required
-      >
-
-      <label>روش ارسال</label>
-      <select name="روش ارسال" required>
-        <option value="">انتخاب کنید</option>
-        <option value="پست پیشتاز">پست پیشتاز</option>
-        <option value="پست سفارشی">پست سفارشی</option>
-      </select>
-
-      <button type="submit" class="submit-btn">
-        ثبت سفارش
-      </button>
-
-    </form>
-
-    <a href="/ELORA-/cart.html" class="back">
-      ← بازگشت به سبد خرید
-    </a>
-
+  <div class="order-box">
+    <h2>🛍️ سفارش شما</h2>
+    <div id="orderItems"></div>
+    <div class="total" id="orderTotal"></div>
   </div>
+
+  <form action="https://formspree.io/f/xppzleyo" method="POST">
+
+    <input type="hidden" name="سفارش" id="orderData">
+    <input type="hidden" name="مبلغ کل" id="totalData">
+
+    <label>نام و نام خانوادگی</label>
+    <input
+      type="text"
+      name="نام و نام خانوادگی"
+      placeholder="نام و نام خانوادگی"
+      required
+    >
+
+    <label>شماره موبایل</label>
+    <input
+      type="tel"
+      name="شماره موبایل"
+      placeholder="09xxxxxxxxx"
+      required
+    >
+
+    <label>استان</label>
+    <input
+      type="text"
+      name="استان"
+      placeholder="استان"
+      required
+    >
+
+    <label>شهر</label>
+    <input
+      type="text"
+      name="شهر"
+      placeholder="شهر"
+      required
+    >
+
+    <label>آدرس کامل</label>
+    <textarea
+      name="آدرس کامل"
+      placeholder="آدرس کامل خود را وارد کنید"
+      required
+    ></textarea>
+
+    <label>کد پستی</label>
+    <input
+      type="text"
+      name="کد پستی"
+      placeholder="۱۰ رقمی"
+      required
+    >
+
+    <label>روش ارسال</label>
+    <select name="روش ارسال" required>
+      <option value="">انتخاب کنید</option>
+      <option value="پست پیشتاز">پست پیشتاز</option>
+      <option value="پست سفارشی">پست سفارشی</option>
+    </select>
+
+    <button type="submit" class="submit-btn">
+      ثبت سفارش
+    </button>
+
+  </form>
+
+  <a href="/ELORA-/cart.html" class="back">
+    ← بازگشت به سبد خرید
+  </a>
+
+</div>
+
+<script>
+  const cart = JSON.parse(localStorage.getItem("eloraCart")) || [];
+
+  const orderItems = document.getElementById("orderItems");
+  const orderTotal = document.getElementById("orderTotal");
+  const orderData = document.getElementById("orderData");
+  const totalData = document.getElementById("totalData");
+
+  let total = 0;
+  let orderText = "";
+
+  if (cart.length === 0) {
+    orderItems.innerHTML = "<p>سبد خرید خالی است.</p>";
+    orderTotal.textContent = "مبلغ کل: ۰ تومان";
+  } else {
+
+    cart.forEach(item => {
+
+      const itemTotal = item.price * item.quantity;
+      total += itemTotal;
+
+      orderItems.innerHTML += `
+        <div class="order-item">
+          <strong>${item.name}</strong><br>
+          تعداد: ${item.quantity}<br>
+          قیمت واحد: ${item.price.toLocaleString("fa-IR")} تومان<br>
+          مبلغ: ${itemTotal.toLocaleString("fa-IR")} تومان
+        </div>
+      `;
+
+      orderText +=
+        `محصول: ${item.name} | تعداد: ${item.quantity} | قیمت واحد: ${item.price} تومان | مبلغ: ${itemTotal} تومان\n`;
+    });
+
+    orderTotal.textContent =
+      "مبلغ کل: " + total.toLocaleString("fa-IR") + " تومان";
+
+    orderData.value = orderText;
+    totalData.value = total + " تومان";
+  }
+</script>
 
 </body>
 </html>
