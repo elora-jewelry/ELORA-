@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>پیرسینگ ابرو استیل | ELORA</title>
 
   <style>
@@ -14,113 +13,101 @@
     }
 
     body {
-      background: #0b0b0c;
-      color: #f5f5f5;
       font-family: Arial, sans-serif;
+      background: #0b0b0b;
+      color: #f5f5f5;
     }
 
     header {
       padding: 22px;
-      border-bottom: 1px solid #292929;
       text-align: center;
+      border-bottom: 1px solid #333;
     }
 
     .logo {
-      color: #d4b06a;
-      font-size: 28px;
+      font-size: 30px;
+      letter-spacing: 6px;
+      color: #d4af37;
       font-weight: bold;
-      letter-spacing: 4px;
     }
 
-    .back {
-      display: inline-block;
-      margin-top: 15px;
-      color: #c9c9cc;
-      text-decoration: none;
-      font-size: 14px;
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
     }
 
     .product {
-      max-width: 900px;
-      margin: 50px auto;
-      padding: 25px;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 45px;
-      align-items: center;
+      gap: 40px;
+      align-items: start;
     }
 
-    .product-image {
-      height: 430px;
+    .product-images {
+      display: grid;
+      gap: 15px;
+    }
+
+    .product-images img {
+      width: 100%;
+      display: block;
+      border-radius: 14px;
       border: 1px solid #333;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #777;
-      font-size: 18px;
+      background: #151515;
     }
 
-    .category {
-      color: #d4b06a;
-      font-size: 13px;
-      margin-bottom: 12px;
+    .product-info {
+      padding: 10px;
     }
 
     h1 {
-      font-size: 38px;
-      margin-bottom: 18px;
+      font-size: 30px;
+      margin-bottom: 20px;
     }
 
     .description {
-      color: #aaa;
+      color: #bbb;
       line-height: 2;
       margin-bottom: 25px;
     }
 
     .price {
-      color: #d4b06a;
-      font-size: 25px;
-      margin-bottom: 30px;
+      color: #d4af37;
+      font-size: 24px;
       font-weight: bold;
+      margin-bottom: 25px;
     }
 
-    .buy-button {
+    .cart-btn {
       display: block;
       width: 100%;
       padding: 16px;
-      background: #d4b06a;
-      color: #0b0b0c;
-      text-align: center;
+      background: #d4af37;
+      color: #111;
       text-decoration: none;
+      text-align: center;
+      border-radius: 10px;
       font-weight: bold;
       border: none;
       cursor: pointer;
+      font-size: 16px;
     }
 
-    .buy-button:hover {
-      opacity: 0.85;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px;
-      color: #666;
-      border-top: 1px solid #292929;
-      margin-top: 40px;
+    .back {
+      display: inline-block;
+      margin-top: 30px;
+      color: #aaa;
+      text-decoration: none;
     }
 
     @media (max-width: 700px) {
       .product {
         grid-template-columns: 1fr;
-        margin: 25px auto;
-      }
-
-      .product-image {
-        height: 350px;
       }
 
       h1 {
-        font-size: 30px;
+        font-size: 25px;
       }
     }
   </style>
@@ -130,46 +117,42 @@
 
   <header>
     <div class="logo">ELORA</div>
-
-    <a href="/ELORA-/products.html" class="back">
-      ← بازگشت به محصولات
-    </a>
   </header>
 
-  <main class="product">
+  <main class="container">
 
-    <div class="product-image">
+    <div class="product">
+
       <div class="product-images">
-  <img src="35a1d3b653675da27e49c81de4bebe57.jpg" alt="پیرسینگ ابرو استیل">
-  <img src="14b309daf8f51a81352d59bdc787a5d5.jpg" alt="پیرسینگ ابرو استیل">
-  <img src="18a9b1742c0bfb928396b7c7f8009182.jpg" alt="پیرسینگ ابرو استیل">
-      </div> 
-    </div>
-
-    <div>
-      <div class="category">ELORA COLLECTION</div>
-
-      <h1>پیرسینگ ابرو استیل</h1>
-
-      <p class="description">
-        پیرسینگ ابرو استیل با طراحی ظریف و مینیمال،
-        مناسب برای استایل‌های روزمره و خاص.
-      </p>
-
-      <div class="price">
-        ۱۵۸,۰۰۰ تومان
+        <img src="./35a1d3b653675da27e49c81de4bebe57.jpg" alt="پیرسینگ ابرو استیل">
+        <img src="./14b309daf8f51a81352d59bdc787a5d5.jpg" alt="پیرسینگ ابرو استیل">
+        <img src="./18a9b1742c0bfb928396b7c7f8009182.jpg" alt="پیرسینگ ابرو استیل">
       </div>
 
-      <a href="#" class="buy-button">
-        افزودن به سبد خرید
-      </a>
+      <div class="product-info">
+
+        <h1>پیرسینگ ابرو استیل</h1>
+
+        <p class="description">
+          پیرسینگ ابرو استیل با طراحی ظریف و مینیمال،
+          مناسب برای استایل‌های خاص و مدرن.
+        </p>
+
+        <div class="price">۱۵۸,۰۰۰ تومان</div>
+
+        <button class="cart-btn">
+          افزودن به سبد خرید
+        </button>
+
+        <a class="back" href="/ELORA-/products.html">
+          ← بازگشت به محصولات
+        </a>
+
+      </div>
+
     </div>
 
   </main>
 
-  <footer>
-    © 2026 ELORA — All Rights Reserved
-  </footer>
-
 </body>
-      </html>
+</html>
