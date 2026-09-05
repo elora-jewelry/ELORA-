@@ -94,6 +94,10 @@
       font-size: 16px;
     }
 
+    .cart-btn:hover {
+      opacity: 0.9;
+    }
+
     .back {
       display: inline-block;
       margin-top: 30px;
@@ -124,9 +128,22 @@
     <div class="product">
 
       <div class="product-images">
-        <img src="./35a1d3b653675da27e49c81de4bebe57.jpg" alt="پیرسینگ ابرو استیل">
-        <img src="./14b309daf8f51a81352d59bdc787a5d5.jpg" alt="پیرسینگ ابرو استیل">
-        <img src="./18a9b1742c0bfb928396b7c7f8009182.jpg" alt="پیرسینگ ابرو استیل">
+
+        <img
+          src="./35a1d3b653675da27e49c81de4bebe57.jpg"
+          alt="پیرسینگ ابرو استیل"
+        >
+
+        <img
+          src="./14b309daf8f51a81352d59bdc787a5d5.jpg"
+          alt="پیرسینگ ابرو استیل"
+        >
+
+        <img
+          src="./18a9b1742c0bfb928396b7c7f8009182.jpg"
+          alt="پیرسینگ ابرو استیل"
+        >
+
       </div>
 
       <div class="product-info">
@@ -138,9 +155,11 @@
           مناسب برای استایل‌های خاص و مدرن.
         </p>
 
-        <div class="price">۱۵۸,۰۰۰ تومان</div>
+        <div class="price">
+          ۱۵۸,۰۰۰ تومان
+        </div>
 
-        <button class="cart-btn">
+        <button class="cart-btn" onclick="addToCart()">
           افزودن به سبد خرید
         </button>
 
@@ -153,6 +172,37 @@
     </div>
 
   </main>
+
+  <script>
+    function addToCart() {
+
+      let cart = JSON.parse(localStorage.getItem("eloraCart")) || [];
+
+      let product = {
+        name: "پیرسینگ ابرو استیل",
+        price: 158000,
+        image: "./35a1d3b653675da27e49c81de4bebe57.jpg",
+        quantity: 1
+      };
+
+      let existing = cart.find(
+        item => item.name === product.name
+      );
+
+      if (existing) {
+        existing.quantity++;
+      } else {
+        cart.push(product);
+      }
+
+      localStorage.setItem(
+        "eloraCart",
+        JSON.stringify(cart)
+      );
+
+      window.location.href = "/ELORA-/cart.html";
+    }
+  </script>
 
 </body>
 </html>
