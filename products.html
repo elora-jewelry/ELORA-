@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl"> 
+<html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,180 +14,166 @@
 
     body {
       font-family: Arial, sans-serif;
-      background: #0b0b0c;
+      background: #0b0b0b;
       color: #f5f5f5;
-      min-height: 100vh;
     }
 
     header {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: rgba(11, 11, 12, 0.95);
-      border-bottom: 1px solid #28282b;
-      padding: 18px 6%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      padding: 22px;
+      text-align: center;
+      border-bottom: 1px solid #333;
     }
 
     .logo {
-      color: #d4b06a;
-      font-size: 25px;
+      font-size: 30px;
+      letter-spacing: 6px;
+      color: #d4af37;
       font-weight: bold;
-      letter-spacing: 4px;
     }
 
-    .back {
-      color: #c9c9cc;
+    .back-home {
+      display: inline-block;
+      margin-top: 15px;
+      color: #aaa;
       text-decoration: none;
-      font-size: 14px;
     }
 
-    .back:hover {
-      color: #d4b06a;
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 20px;
     }
 
     .hero {
       text-align: center;
-      padding: 70px 20px 40px;
+      margin-bottom: 40px;
     }
 
     .hero span {
-      color: #d4b06a;
-      font-size: 12px;
-      letter-spacing: 3px;
+      color: #d4af37;
+      letter-spacing: 4px;
+      font-size: 14px;
     }
 
     .hero h1 {
-      font-size: 42px;
-      margin: 15px 0;
-    }
-
-    .hero p {
-      color: #96969b;
-      font-size: 15px;
+      font-size: 36px;
+      margin-top: 12px;
     }
 
     .categories {
       display: flex;
       justify-content: center;
       gap: 12px;
-      margin: 10px 20px 40px;
+      margin-bottom: 40px;
       flex-wrap: wrap;
     }
 
     .category {
-      background: #121214;
-      border: 1px solid #28282b;
-      color: #c9c9cc;
-      padding: 10px 22px;
+      padding: 10px 20px;
+      border: 1px solid #555;
       border-radius: 30px;
-      cursor: pointer;
+      color: #ddd;
+      text-decoration: none;
     }
 
     .category:hover {
-      border-color: #d4b06a;
-      color: #d4b06a;
+      border-color: #d4af37;
+      color: #d4af37;
     }
 
     .products {
-      width: 88%;
-      max-width: 1200px;
-      margin: auto;
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 22px;
-      padding-bottom: 70px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
     }
 
     .product {
-      background: #121214;
-      border: 1px solid #28282b;
-      border-radius: 16px;
+      background: #121212;
+      border: 1px solid #292929;
+      border-radius: 15px;
       overflow: hidden;
       transition: 0.3s;
     }
 
     .product:hover {
       transform: translateY(-5px);
-      border-color: #d4b06a;
+      border-color: #d4af37;
     }
 
     .product-image {
-      height: 250px;
-      background: linear-gradient(135deg, #171719, #0f0f10);
+      width: 100%;
+      height: 280px;
+      background: #181818;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #77777c;
-      font-size: 14px;
+      color: #777;
+      overflow: hidden;
+    }
+
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
     .product-info {
-      padding: 18px;
+      padding: 22px;
     }
 
     .product-info h3 {
-      font-size: 17px;
-      margin-bottom: 8px;
+      font-size: 22px;
+      margin-bottom: 10px;
     }
 
     .product-info p {
-      color: #96969b;
-      font-size: 13px;
+      color: #aaa;
       margin-bottom: 15px;
     }
 
     .price {
-      color: #d4b06a;
+      color: #d4af37;
+      font-size: 20px;
       font-weight: bold;
-      font-size: 16px;
-      margin-bottom: 15px;
+      margin-bottom: 18px;
     }
 
     .view {
       display: block;
       text-align: center;
-      text-decoration: none;
-      border: 1px solid #d4b06a;
-      color: #d4b06a;
-      padding: 10px;
+      padding: 12px;
+      border: 1px solid #d4af37;
       border-radius: 8px;
+      color: #d4af37;
+      text-decoration: none;
       transition: 0.3s;
     }
 
     .view:hover {
-      background: #d4b06a;
-      color: #0b0b0c;
+      background: #d4af37;
+      color: #111;
     }
 
     footer {
-      border-top: 1px solid #28282b;
       text-align: center;
-      padding: 25px;
-      color: #77777c;
-      font-size: 12px;
+      padding: 40px 20px;
+      margin-top: 60px;
+      border-top: 1px solid #292929;
+      color: #777;
     }
 
-    @media (max-width: 900px) {
-      .products {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 550px) {
+    @media (max-width: 700px) {
       .products {
         grid-template-columns: 1fr;
-        width: 92%;
       }
 
       .hero h1 {
-        font-size: 32px;
+        font-size: 28px;
       }
 
       .product-image {
-        height: 280px;
+        height: 300px;
       }
     }
   </style>
@@ -197,83 +183,87 @@
 
   <header>
     <div class="logo">ELORA</div>
-    <a href="index.html" class="back">← بازگشت به خانه</a>
+    <a href="/ELORA-/" class="back-home">← بازگشت به خانه</a>
   </header>
 
-  <section class="hero">
-    <span>ELORA COLLECTION</span>
-    <h1>محصولات</h1>
-    <p>زیورآلاتی برای استایل خاص تو</p>
-  </section>
+  <main class="container">
 
-  <div class="categories">
-    <button class="category">همه</button>
-    <button class="category">پیرسینگ</button>
-    <button class="category">گوشواره</button>
-  </div>
+    <section class="hero">
+      <span>ELORA COLLECTION</span>
+      <h1>محصولات</h1>
+    </section>
 
-  <section class="products">
-
-    <div class="product">
-      <div class="product-image">
-        تصویر محصول
-      </div>
-
-      <div class="product-info">
-        <h3>Silver Hoop</h3>
-        <p>گوشواره حلقه‌ای نقره‌ای</p>
-        <div class="price">۴۵۰,۰۰۰ تومان</div>
-        <a href="#" class="view">مشاهده محصول</a>
-      </div>
+    <div class="categories">
+      <a href="#" class="category">همه</a>
+      <a href="#" class="category">پیرسینگ</a>
+      <a href="#" class="category">گوشواره</a>
     </div>
 
+    <section class="products">
 
-    <div class="product">
-      <div class="product-image">
-        تصویر محصول
+      <!-- محصول ۱ -->
+      <div class="product">
+        <div class="product-image">
+          تصویر محصول
+        </div>
+
+        <div class="product-info">
+          <h3>Silver Hoop</h3>
+          <p>گوشواره حلقه‌ای نقره‌ای</p>
+          <div class="price">۴۵۰,۰۰۰ تومان</div>
+          <a href="#" class="view">مشاهده محصول</a>
+        </div>
       </div>
 
-      <div class="product-info">
-        <h3>Gold Piercing</h3>
-        <p>پیرسینگ ظریف طلایی</p>
-        <div class="price">۳۹۰,۰۰۰ تومان</div>
-        <a href="#" class="view">مشاهده محصول</a>
-      </div>
-    </div>
+      <!-- محصول ۲ -->
+      <div class="product">
+        <div class="product-image">
+          <img src="./35a1d3b653675da27e49c81de4bebe57.jpg" alt="پیرسینگ ابرو استیل">
+        </div>
 
-
-    <div class="product">
-      <div class="product-image">
-        تصویر محصول
-      </div>
-
-      <div class="product-info">
-        <h3>Minimal Earrings</h3>
-        <p>گوشواره مینیمال</p>
-        <div class="price">۵۲۰,۰۰۰ تومان</div>
-        <a href="#" class="view">مشاهده محصول</a>
-      </div>
-    </div>
-
-
-    <div class="product">
-      <div class="product-image">
-        تصویر محصول
+        <div class="product-info">
+          <h3>پیرسینگ ابرو استیل</h3>
+          <p>پیرسینگ ظریف و مینیمال</p>
+          <div class="price">۱۵۸,۰۰۰ تومان</div>
+          <a href="/ELORA-/product1.html" class="view">مشاهده محصول</a>
+        </div>
       </div>
 
-      <div class="product-info">
-        <h3>Gold Hoop</h3>
-        <p>گوشواره حلقه‌ای طلایی</p>
-        <div class="price">۶۹۰,۰۰۰ تومان</div>
-        <a href="#" class="view">مشاهده محصول</a>
-      </div>
-    </div>
+      <!-- محصول ۳ -->
+      <div class="product">
+        <div class="product-image">
+          تصویر محصول
+        </div>
 
-  </section>
+        <div class="product-info">
+          <h3>Minimal Earrings</h3>
+          <p>گوشواره مینیمال</p>
+          <div class="price">۵۲۰,۰۰۰ تومان</div>
+          <a href="#" class="view">مشاهده محصول</a>
+        </div>
+      </div>
+
+      <!-- محصول ۴ -->
+      <div class="product">
+        <div class="product-image">
+          تصویر محصول
+        </div>
+
+        <div class="product-info">
+          <h3>Gold Hoop</h3>
+          <p>گوشواره حلقه‌ای طلایی</p>
+          <div class="price">۶۹۰,۰۰۰ تومان</div>
+          <a href="#" class="view">مشاهده محصول</a>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
 
   <footer>
-    © 2026 ELORA — Jewelry & Piercing
+    © 2026 ELORA — JEWELRY & PIERCING
   </footer>
 
 </body>
-                                  </html>
+</html>
