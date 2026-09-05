@@ -2,8 +2,6 @@
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
-
-  <!-- Mobile -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>ELORA | Jewelry & Piercing</title>
@@ -14,10 +12,6 @@
   >
 
   <style>
-
-    /* =========================
-       RESET
-    ========================= */
 
     * {
       margin: 0;
@@ -46,11 +40,6 @@
       font-family: inherit;
     }
 
-
-    /* =========================
-       VARIABLES
-    ========================= */
-
     :root {
       --bg: #0b0b0c;
       --card: #121214;
@@ -61,10 +50,7 @@
       --white: #f5f5f5;
     }
 
-
-    /* =========================
-       HEADER
-    ========================= */
+    /* HEADER */
 
     .header {
       position: sticky;
@@ -87,12 +73,9 @@
 
     .logo {
       direction: ltr;
-
       font-size: 25px;
       letter-spacing: 8px;
-
       color: var(--gold);
-
       font-weight: 500;
     }
 
@@ -104,7 +87,6 @@
     .nav a {
       color: #cfcfd2;
       font-size: 14px;
-
       transition: color .25s ease;
     }
 
@@ -122,22 +104,18 @@
       background: none;
       border: 0;
       color: white;
-
       font-size: 19px;
-
       cursor: pointer;
     }
 
     .cart {
       position: relative;
-
       font-size: 20px;
       cursor: pointer;
     }
 
     .cart-count {
       position: absolute;
-
       top: -9px;
       right: -9px;
 
@@ -156,10 +134,7 @@
       justify-content: center;
     }
 
-
-    /* =========================
-       HERO
-    ========================= */
+    /* HERO */
 
     .hero {
       min-height: 680px;
@@ -217,19 +192,14 @@
     .hero-content {
       position: relative;
       z-index: 2;
-
       max-width: 750px;
     }
 
     .eyebrow {
       color: var(--gold);
-
       font-size: 12px;
-
       letter-spacing: 5px;
-
       direction: ltr;
-
       margin-bottom: 24px;
     }
 
@@ -282,14 +252,10 @@
     .hero-button:hover {
       background: var(--gold);
       color: #111;
-
       transform: translateY(-2px);
     }
 
-
-    /* =========================
-       GENERAL SECTION
-    ========================= */
+    /* GENERAL */
 
     .section {
       padding: 95px 6%;
@@ -297,32 +263,23 @@
 
     .section-heading {
       text-align: center;
-
       margin-bottom: 48px;
     }
 
     .section-heading span {
       color: var(--gold);
-
       direction: ltr;
-
       letter-spacing: 4px;
-
       font-size: 11px;
     }
 
     .section-heading h2 {
       font-size: 30px;
-
       font-weight: 300;
-
       margin-top: 9px;
     }
 
-
-    /* =========================
-       CATEGORIES
-    ========================= */
+    /* CATEGORIES */
 
     .categories {
       display: grid;
@@ -365,7 +322,6 @@
 
     .category:hover {
       transform: translateY(-5px);
-
       border-color: var(--gold);
     }
 
@@ -376,36 +332,25 @@
 
     .category h3 {
       font-size: 27px;
-
       font-weight: 300;
     }
 
     .category p {
       color: #888;
-
       direction: ltr;
-
       letter-spacing: 3px;
-
       font-size: 11px;
-
       margin-top: 4px;
     }
 
     .category-arrow {
       display: inline-block;
-
       margin-top: 18px;
-
       color: var(--gold);
-
       font-size: 14px;
     }
 
-
-    /* =========================
-       PRODUCTS
-    ========================= */
+    /* PRODUCTS */
 
     .products {
       max-width: 1200px;
@@ -433,7 +378,6 @@
 
     .product:hover {
       transform: translateY(-4px);
-
       border-color: #454549;
     }
 
@@ -453,8 +397,15 @@
         );
 
       color: #777;
-
       font-size: 12px;
+      overflow: hidden;
+    }
+
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
     .product-info {
@@ -463,15 +414,12 @@
 
     .product-name {
       font-size: 15px;
-
       font-weight: 400;
     }
 
     .product-description {
       color: var(--muted);
-
       font-size: 12px;
-
       margin-top: 4px;
     }
 
@@ -488,9 +436,7 @@
 
     .price {
       color: var(--gold);
-
       font-size: 14px;
-
       white-space: nowrap;
     }
 
@@ -510,14 +456,10 @@
 
     .add-button:hover {
       border-color: var(--gold);
-
       color: var(--gold);
     }
 
-
-    /* =========================
-       BRAND MESSAGE
-    ========================= */
+    /* BRAND */
 
     .brand {
       text-align: center;
@@ -532,7 +474,6 @@
 
     .brand-inner {
       max-width: 720px;
-
       margin: auto;
     }
 
@@ -558,10 +499,7 @@
       font-size: 14px;
     }
 
-
-    /* =========================
-       FEATURES
-    ========================= */
+    /* FEATURES */
 
     .features {
       max-width: 1000px;
@@ -587,28 +525,21 @@
 
     .feature-icon {
       font-size: 25px;
-
       margin-bottom: 12px;
     }
 
     .feature h3 {
       font-size: 15px;
-
       font-weight: 400;
-
       margin-bottom: 7px;
     }
 
     .feature p {
       color: var(--muted);
-
       font-size: 12px;
     }
 
-
-    /* =========================
-       FOOTER
-    ========================= */
+    /* FOOTER */
 
     footer {
       border-top: 1px solid var(--border);
@@ -648,10 +579,7 @@
       margin-top: 28px;
     }
 
-
-    /* =========================
-       MOBILE
-    ========================= */
+    /* MOBILE */
 
     @media (max-width: 900px) {
 
@@ -669,24 +597,20 @@
 
     }
 
-
     @media (max-width: 600px) {
 
       .header {
         height: 68px;
-
         padding: 0 5%;
       }
 
       .logo {
         font-size: 20px;
-
         letter-spacing: 6px;
       }
 
       .hero {
         min-height: 590px;
-
         padding: 60px 20px;
       }
 
@@ -697,9 +621,7 @@
 
       .hero-title {
         font-size: 55px;
-
         letter-spacing: 8px;
-
         margin-left: 8px;
       }
 
@@ -725,7 +647,6 @@
 
       .products {
         grid-template-columns: 1fr 1fr;
-
         gap: 12px;
       }
 
@@ -735,7 +656,6 @@
 
       .product-bottom {
         flex-direction: column;
-
         align-items: stretch;
       }
 
@@ -745,12 +665,10 @@
 
       .brand-logo {
         font-size: 32px;
-
         letter-spacing: 8px;
       }
 
     }
-
 
     @media (max-width: 380px) {
 
@@ -763,20 +681,15 @@
   </style>
 </head>
 
-
 <body>
 
-
-  <!-- =========================
-       HEADER
-  ========================= -->
+  <!-- HEADER -->
 
   <header class="header">
 
     <a href="#home" class="logo">
       ELORA
     </a>
-
 
     <nav class="nav">
 
@@ -788,7 +701,7 @@
         دسته‌بندی
       </a>
 
-      <a href="<a href="/ELORA-/products.html">
+      <a href="/ELORA-/products.html">
         محصولات
       </a>
 
@@ -797,7 +710,6 @@
       </a>
 
     </nav>
-
 
     <div class="header-actions">
 
@@ -808,26 +720,28 @@
         ⌕
       </button>
 
-
-      <div class="cart">
-
+      <a
+        href="/ELORA-/cart.html"
+        class="cart"
+        aria-label="سبد خرید"
+      >
         🛒
 
-        <span class="cart-count">
+        <span
+          class="cart-count"
+          id="cartCount"
+        >
           0
         </span>
 
-      </div>
+      </a>
 
     </div>
 
   </header>
 
 
-
-  <!-- =========================
-       HERO
-  ========================= -->
+  <!-- HERO -->
 
   <main>
 
@@ -861,10 +775,7 @@
     </section>
 
 
-
-    <!-- =========================
-         CATEGORIES
-    ========================= -->
+    <!-- CATEGORIES -->
 
     <section
       class="section"
@@ -883,12 +794,10 @@
 
       </div>
 
-
       <div class="categories">
 
-
         <a
-          href="#products"
+          href="/ELORA-/products.html"
           class="category"
         >
 
@@ -910,9 +819,8 @@
 
         </a>
 
-
         <a
-          href="#products"
+          href="/ELORA-/products.html"
           class="category"
         >
 
@@ -934,16 +842,12 @@
 
         </a>
 
-
       </div>
 
     </section>
 
 
-
-    <!-- =========================
-         PRODUCTS
-    ========================= -->
+    <!-- PRODUCTS -->
 
     <section
       class="section"
@@ -962,9 +866,7 @@
 
       </div>
 
-
       <div class="products">
-
 
         <article class="product">
 
@@ -999,39 +901,45 @@
         </article>
 
 
-
         <article class="product">
 
           <div class="product-image">
-            تصویر محصول
+
+            <img
+              src="./35a1d3b653675da27e49c81de4bebe57.jpg"
+              alt="پیرسینگ ابرو استیل"
+            >
+
           </div>
 
           <div class="product-info">
 
             <h3 class="product-name">
-              Gold Piercing
+              پیرسینگ ابرو استیل
             </h3>
 
             <p class="product-description">
-              پیرسینگ طلایی مینیمال
+              پیرسینگ ظریف و مینیمال
             </p>
 
             <div class="product-bottom">
 
               <span class="price">
-                ۲۸۰,۰۰۰ تومان
+                ۱۵۸,۰۰۰ تومان
               </span>
 
-              <button class="add-button">
-                افزودن
-              </button>
+              <a
+                href="/ELORA-/product1.html"
+                class="add-button"
+              >
+                مشاهده
+              </a>
 
             </div>
 
           </div>
 
         </article>
-
 
 
         <article class="product">
@@ -1067,7 +975,6 @@
         </article>
 
 
-
         <article class="product">
 
           <div class="product-image">
@@ -1100,16 +1007,12 @@
 
         </article>
 
-
       </div>
 
     </section>
 
 
-
-    <!-- =========================
-         BRAND
-    ========================= -->
+    <!-- BRAND -->
 
     <section
       class="section brand"
@@ -1136,10 +1039,7 @@
     </section>
 
 
-
-    <!-- =========================
-         FEATURES
-    ========================= -->
+    <!-- FEATURES -->
 
     <section class="section">
 
@@ -1155,9 +1055,7 @@
 
       </div>
 
-
       <div class="features">
-
 
         <div class="feature">
 
@@ -1175,7 +1073,6 @@
 
         </div>
 
-
         <div class="feature">
 
           <div class="feature-icon">
@@ -1191,7 +1088,6 @@
           </p>
 
         </div>
-
 
         <div class="feature">
 
@@ -1209,7 +1105,6 @@
 
         </div>
 
-
       </div>
 
     </section>
@@ -1217,10 +1112,7 @@
   </main>
 
 
-
-  <!-- =========================
-       FOOTER
-  ========================= -->
+  <!-- FOOTER -->
 
   <footer>
 
@@ -1239,5 +1131,29 @@
   </footer>
 
 
+  <!-- CART COUNT -->
+
+  <script>
+
+    function updateCartCount() {
+
+      const cart =
+        JSON.parse(
+          localStorage.getItem("eloraCart")
+        ) || [];
+
+      let count = 0;
+
+      cart.forEach(function(item) {
+        count += item.quantity;
+      });
+
+      document.getElementById("cartCount").textContent = count;
+    }
+
+    updateCartCount();
+
+  </script>
+
 </body>
-</html>
+          </html>
