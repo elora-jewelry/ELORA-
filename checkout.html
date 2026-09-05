@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ثبت سفارش | ELORA</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b0b0b;
+      color: #f5f5f5;
+    }
+
+    header {
+      padding: 22px;
+      text-align: center;
+      border-bottom: 1px solid #333;
+    }
+
+    .logo {
+      font-size: 28px;
+      letter-spacing: 5px;
+      color: #d4af37;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 25px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #d4af37;
+      margin-bottom: 35px;
+    }
+
+    label {
+      display: block;
+      margin: 18px 0 8px;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      padding: 14px;
+      border-radius: 8px;
+      border: 1px solid #444;
+      background: #151515;
+      color: white;
+      font-size: 15px;
+    }
+
+    textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    .submit-btn {
+      width: 100%;
+      margin-top: 30px;
+      padding: 16px;
+      border: none;
+      border-radius: 8px;
+      background: #d4af37;
+      color: #111;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .back {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      color: #d4af37;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">ELORA</div>
+  </header>
+
+  <div class="container">
+
+    <h1>ثبت سفارش</h1>
+
+    <form>
+
+      <label>نام و نام خانوادگی</label>
+      <input type="text" placeholder="نام و نام خانوادگی" required>
+
+      <label>شماره موبایل</label>
+      <input type="tel" placeholder="09xxxxxxxxx" required>
+
+      <label>استان</label>
+      <input type="text" placeholder="استان" required>
+
+      <label>شهر</label>
+      <input type="text" placeholder="شهر" required>
+
+      <label>آدرس کامل</label>
+      <textarea placeholder="آدرس کامل خود را وارد کنید" required></textarea>
+
+      <label>کد پستی</label>
+      <input type="text" placeholder="۱۰ رقمی" required>
+
+      <label>روش ارسال</label>
+      <select required>
+        <option value="">انتخاب کنید</option>
+        <option>پست پیشتاز</option>
+        <option>پست سفارشی</option>
+      </select>
+
+      <button type="submit" class="submit-btn">
+        ثبت سفارش
+      </button>
+
+    </form>
+
+    <a href="/ELORA-/cart.html" class="back">
+      ← بازگشت به سبد خرید
+    </a>
+
+  </div>
+
+</body>
+</html>
